@@ -1,0 +1,44 @@
+
+<%= "<strong> #{@info[:queues]} </strong> queues" %><br />
+<%= "<strong> #{@info[:pending]} </strong> pending " %><br />
+<%= "<strong> #{@info[:processed]} </strong> processed" %>
+
+<hr />
+
+<h3>default</h3>
+
+<form method="POST">
+  <input type="submit" value="Create New Job"/>
+</form>
+
+<hr />
+
+<h3>failing</h3>
+
+<form action='/failing' method='POST''>
+  <input type="submit" value="Create Failing New Job"/>
+</form>
+
+<hr />
+
+<h3>umovsync</h3>
+
+<form action='/umovsync' method="POST">
+  mensagem:<br />
+  <input type="text" name="mensagem" value="" />
+  <input type="submit" value="enfiléra!"/>
+</form>
+
+<hr />
+
+
+<h3>umovsync dyna-queues</h3>
+
+<form action='/umovsync/dynamic' method="POST">
+  mensagem:<br />
+  <input type="text" name="mensagem" value="" />
+  <input type="submit" value="enfiléra!"/>
+</form>
+
+<hr />
+
